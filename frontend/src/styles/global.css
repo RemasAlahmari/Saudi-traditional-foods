@@ -1,0 +1,126 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --gold:       #C9A84C;
+  --gold-light: #E8C97A;
+  --gold-pale:  #FBF3DC;
+  --dark:       #1A1208;
+  --dark-mid:   #2D1F0A;
+  --ivory:      #FAF7F0;
+  --ivory-2:    #F0EAD6;
+  --sand:       #C8A97E;
+  --text:       #1A1208;
+  --text-2:     #5C4A2A;
+  --text-3:     #9C7E4A;
+  --white:      #FFFFFF;
+  --error:      #DC2626;
+  --success:    #16A34A;
+  --radius:     12px;
+  --radius-lg:  20px;
+  --shadow:     0 4px 24px rgba(26,18,8,.10);
+  --shadow-lg:  0 12px 48px rgba(26,18,8,.16);
+  --nav-h:      68px;
+  --font-head:  'Playfair Display', Georgia, serif;
+  --font-body:  'Inter', system-ui, sans-serif;
+  --transition: .25s cubic-bezier(.4,0,.2,1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--ivory);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; text-decoration: none; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+input, textarea { font-family: inherit; }
+h1,h2,h3,h4 { font-family: var(--font-head); line-height: 1.2; }
+
+/* Utilities */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 11px 24px; border-radius: 8px;
+  font-size: .875rem; font-weight: 600; letter-spacing: .02em;
+  transition: var(--transition); cursor: pointer;
+}
+.btn-primary {
+  background: linear-gradient(135deg, var(--gold), #B8943C);
+  color: var(--dark);
+  box-shadow: 0 2px 12px rgba(201,168,76,.35);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(201,168,76,.45); }
+.btn-outline {
+  border: 1.5px solid var(--gold); color: var(--gold); background: transparent;
+}
+.btn-outline:hover { background: var(--gold); color: var(--dark); }
+.btn-ghost { color: var(--text-2); }
+.btn-ghost:hover { color: var(--gold); }
+
+/* Form */
+.form-group { margin-bottom: 20px; }
+.form-label { display: block; font-size: .8rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--text-2); margin-bottom: 6px; }
+.form-input {
+  width: 100%; padding: 11px 14px;
+  background: var(--white); border: 1.5px solid var(--ivory-2);
+  border-radius: 8px; font-size: .95rem; color: var(--text);
+  transition: border-color var(--transition);
+}
+.form-input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,168,76,.15); }
+.form-input.err { border-color: var(--error); }
+.form-error { font-size: .78rem; color: var(--error); margin-top: 5px; }
+
+/* Cards grid */
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+
+/* Loader */
+.spinner {
+  width: 36px; height: 36px;
+  border: 3px solid var(--gold-pale);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.loading-wrap { display: flex; flex-direction: column; align-items: center; gap: 14px; padding: 64px; color: var(--text-3); font-size: .9rem; }
+
+/* Empty */
+.empty { text-align: center; padding: 80px 20px; }
+.empty-icon { font-size: 3.5rem; margin-bottom: 16px; opacity: .4; }
+.empty h3 { font-family: var(--font-head); font-size: 1.6rem; color: var(--text-2); margin-bottom: 8px; }
+.empty p { color: var(--text-3); max-width: 380px; margin: 0 auto 24px; font-size: .9rem; }
+
+/* Error banner */
+.err-banner {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 16px; background: #FEF2F2;
+  border: 1px solid #FECACA; border-radius: 8px;
+  color: var(--error); font-size: .875rem; margin-bottom: 20px;
+}
+
+/* Success banner */
+.ok-banner {
+  padding: 12px 16px; background: #F0FDF4;
+  border: 1px solid #BBF7D0; border-radius: 8px;
+  color: var(--success); font-size: .875rem; margin-bottom: 20px;
+}
+
+/* Page wrapper */
+.page { padding-top: var(--nav-h); min-height: 100vh; }
+
+/* Animations */
+@keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+.fade-up { animation: fadeUp .5s ease both; }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--ivory); }
+::-webkit-scrollbar-thumb { background: var(--sand); border-radius: 3px; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }

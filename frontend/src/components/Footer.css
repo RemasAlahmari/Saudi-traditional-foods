@@ -1,0 +1,4 @@
+.footer { background: var(--dark); padding: 24px 0; margin-top: auto; }
+.footer__inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.footer__logo { font-family: var(--font-head); color: var(--gold); font-style: italic; }
+.footer__copy { font-size: .8rem; color: rgba(255,255,255,.4); }

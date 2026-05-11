@@ -1,0 +1,44 @@
+.detail { background: var(--ivory); }
+.detail__back { margin: 24px 0 0; color: var(--text-3); font-size: .875rem; }
+.detail__back:hover { color: var(--gold); }
+
+.detail__hero {
+  display: grid; grid-template-columns: 420px 1fr;
+  gap: 48px; align-items: start; padding: 32px 0 48px;
+}
+.detail__img { width: 100%; border-radius: var(--radius-lg); box-shadow: var(--shadow-lg); }
+.detail__area { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); font-weight: 600; }
+.detail__name { font-size: clamp(1.8rem, 4vw, 2.8rem); color: var(--dark); margin: 10px 0 16px; }
+.detail__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.tag { padding: 4px 12px; border-radius: 20px; font-size: .75rem; font-weight: 500; background: var(--gold-pale); color: var(--text-2); border: 1px solid rgba(201,168,76,.3); }
+
+.detail__fav-btn {
+  border: 1.5px solid var(--gold); color: var(--gold);
+  background: transparent; padding: 11px 24px; border-radius: 8px;
+  font-size: .875rem; font-weight: 600; transition: var(--transition);
+}
+.detail__fav-btn:hover, .detail__fav-btn.active {
+  background: var(--gold); color: var(--dark);
+}
+.detail__fav-btn:disabled { opacity: .6; cursor: not-allowed; }
+.detail__login-hint { font-size: .82rem; color: var(--text-3); margin-top: 10px; }
+.detail__login-hint a { color: var(--gold); }
+
+.detail__body {
+  display: grid; grid-template-columns: 1fr 1.6fr;
+  gap: 48px; padding-bottom: 80px;
+}
+.detail__section h2 { font-family: var(--font-head); font-size: 1.4rem; color: var(--dark); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid var(--gold-pale); }
+
+.ingredients { display: flex; flex-direction: column; gap: 10px; }
+.ingredients__item { display: flex; align-items: flex-start; gap: 10px; padding: 10px 14px; background: var(--white); border-radius: 8px; border: 1px solid var(--ivory-2); font-size: .9rem; }
+.ingredients__dot { color: var(--gold); font-size: .65rem; margin-top: 3px; flex-shrink: 0; }
+
+.instructions { display: flex; flex-direction: column; gap: 14px; }
+.instructions p { font-size: .9rem; line-height: 1.75; color: var(--text-2); }
+
+@media (max-width: 900px) {
+  .detail__hero { grid-template-columns: 1fr; }
+  .detail__img { max-width: 480px; }
+  .detail__body { grid-template-columns: 1fr; }
+}
