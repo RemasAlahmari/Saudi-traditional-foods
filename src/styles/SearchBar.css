@@ -1,0 +1,98 @@
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: var(--white);
+  border: 1.5px solid var(--ivory-dark);
+  border-radius: 50px;
+  overflow: hidden;
+  transition: var(--transition);
+  max-width: 480px;
+  width: 100%;
+  box-shadow: var(--shadow-sm);
+}
+
+.search-bar:focus-within {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.15);
+}
+
+.search-bar-large {
+  max-width: 600px;
+  border-radius: 50px;
+}
+
+.search-icon {
+  padding: 0 8px 0 16px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  background: none;
+  padding: 12px 8px;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  min-width: 0;
+}
+
+.search-bar-large .search-input {
+  padding: 16px 8px;
+  font-size: 1rem;
+}
+
+.search-input:focus {
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Hide native clear button */
+.search-input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.search-clear {
+  padding: 0 8px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: color var(--transition);
+}
+
+.search-clear:hover {
+  color: var(--charcoal);
+}
+
+.search-submit {
+  padding: 10px 20px;
+  margin: 4px;
+  background: linear-gradient(135deg, var(--gold), var(--sand-dark));
+  color: var(--charcoal);
+  border: none;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  font-family: var(--font-body);
+}
+
+.search-bar-large .search-submit {
+  padding: 12px 28px;
+  font-size: 0.875rem;
+}
+
+.search-submit:hover {
+  background: linear-gradient(135deg, var(--gold-light), var(--gold));
+  box-shadow: var(--shadow-gold);
+}
