@@ -2,6 +2,10 @@
 frontend/node_modules/
 frontend/.vite/
 frontend/dist/
+node_modules/
+.vite/
+dist/
+src/
 
 # Env
 .env
@@ -10,3 +14,7 @@ frontend/dist/
 # OS
 .DS_Store
 Thumbs.db
+
+# Lock files in root
+package-lock.json
+index.html
