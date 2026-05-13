@@ -21,7 +21,7 @@ Setup
 
 1. Clone
 
-bashgit clone https://github.com/RemasAlahmari/Saudi-traditional-foods.git
+bash  git clone https://github.com/RemasAlahmari/Saudi-traditional-foods.git
 
 2. Database
 
@@ -46,7 +46,11 @@ npm run dev
 Open http://localhost:5173
 
 Team
-Member       RoleMember
- Remas        Frontend
- Layan        Backend and database commands
- Zad          API and Database Connection and setup
+
+ Member               RoleMember
+
+ Remas                Frontend
+ 
+ Layan                Backend and database commands
+ 
+ Zad                  API and Database Connection and setup
