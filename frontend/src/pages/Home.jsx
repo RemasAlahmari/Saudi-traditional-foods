@@ -35,25 +35,36 @@ export default function Home() {
       .catch(() => { });
   }, [user]);
 
+  //  Clear Search
+const clearSearch = () => { 
+  setQuery(''); 
+  setFiltered(meals); 
+  setError(''); 
+};
   // Search handler
-  const handleSearch = async (e) => {
-    e.preventDefault();
-    if (!query.trim()) { setFiltered(meals); return; }
+  // This replaces your handleSearch and uses the logic you just confirmed
+const handleSearch = (e) => {
+  e.preventDefault();
+  const searchTerm = query.trim().toLowerCase();
 
-    setSearching(true);
+  if (!searchTerm) {
+    clearSearch(); // Use your clearSearch function here!
+    return;
+  }
+  // Local filtering is better here because it searches the 12 meals
+  // already visible in your "All Saudi Dishes" section.
+  const results = meals.filter(meal => 
+    meal.strMeal.toLowerCase().includes(searchTerm)
+  );
+  setFiltered(results);
+   
+  if (results.length === 0) {
+    setError(`No Saudi meals found for "${query}".`);
+  } else {
     setError('');
-    try {
-      const results = await searchSaudiMeals(query.trim());
-      setFiltered(results);
-      if (results.length === 0) setError(`No Saudi meals found for "${query}".`);
-    } catch {
-      setError('Search failed. Please try again.');
-    } finally {
-      setSearching(false);
-    }
-  };
+  }
+};
 
-  const clearSearch = () => { setQuery(''); setFiltered(meals); setError(''); };
 
   const handleFavChange = (mealId, isFav) => {
     setFavIds(prev => isFav ? [...prev, String(mealId)] : prev.filter(id => id !== String(mealId)));
