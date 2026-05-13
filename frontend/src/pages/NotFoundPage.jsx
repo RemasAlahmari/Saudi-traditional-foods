@@ -10,7 +10,7 @@ export default function NotFoundPage() {
                 <h1 className="notfound-code">4🍽️4</h1>
                 <h2>Recipe Not Found</h2>
                 <p dir="rtl" lang="ar">عذراً، الصفحة غير موجودة</p>
-                <p>The dish you're looking for doesn't exist or has moved.</p>
+                <p>I told you this ain’t the menu..</p>
                 
                 <div className="notfound-actions">
                     <button className="btn btn-secondary" onClick={() => navigate(-1)}>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import MealCard from '../components/MealCard';
 import { getSaudiMeals, searchSaudiMeals } from '../Services/index';
 import { useAuth } from '../state/AuthContext';
@@ -8,13 +9,13 @@ import './Home.css';
 export default function Home() {
   const { user } = useAuth();
 
-  const [meals,      setMeals]      = useState([]);
-  const [filtered,   setFiltered]   = useState([]);
-  const [loading,    setLoading]    = useState(true);
-  const [error,      setError]      = useState('');
-  const [query,      setQuery]      = useState('');
-  const [searching,  setSearching]  = useState(false);
-  const [favIds,     setFavIds]     = useState([]);
+  const [meals, setMeals] = useState([]);
+  const [filtered, setFiltered] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+  const [query, setQuery] = useState('');
+  const [searching, setSearching] = useState(false);
+  const [favIds, setFavIds] = useState([]);
 
   // Load all Saudi meals on mount
   useEffect(() => {
@@ -31,7 +32,7 @@ export default function Home() {
       .then(res => {
         if (res.success) setFavIds(res.data.favorites.map(f => String(f.meal_id)));
       })
-      .catch(() => {});
+      .catch(() => { });
   }, [user]);
 
   // Search handler
@@ -86,6 +87,9 @@ export default function Home() {
               {searching ? '...' : 'Search'}
             </button>
           </form>
+          <Link to="/not-found" className="btn btn-outline" style={{ marginTop: '16px' }}>
+            This Ain’t the Menu
+          </Link>
         </div>
       </section>
 
