@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import MealCard from '../components/MealCard';
-import { getSaudiMeals, searchSaudiMeals } from '../api/index';
-import { useAuth } from '../context/AuthContext';
-import { getFavorites } from '../api/index';
+import { getSaudiMeals, searchSaudiMeals } from '../Services/index';
+import { useAuth } from '../state/AuthContext';
+import { getFavorites } from '../Services/index';
 import './Home.css';
 
 export default function Home() {

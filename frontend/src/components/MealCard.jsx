@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import { saveFavorite, deleteFavorite } from '../api/index';
+import { useAuth } from '../state/AuthContext';
+import { saveFavorite, deleteFavorite } from '../Services/index';
 import './MealCard.css';
 
 export default function MealCard({ meal, isFav = false, onFavChange }) {

@@ -9,8 +9,6 @@
  * Returns: { success, message }
  */
 
-require_once __DIR__ . '/../middleware/auth.php';
-require_once __DIR__ . '/../utils/response.php';
 
 // ── Bootstrap ────────────────────────────────
 setCORSHeaders();

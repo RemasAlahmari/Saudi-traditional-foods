@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getMealById, saveFavorite, deleteFavorite } from '../api/index';
-import { useAuth } from '../context/AuthContext';
+import { getMealById, saveFavorite, deleteFavorite } from '../Services/index';
+import { useAuth } from '../state/AuthContext';
 import './MealDetail.css';
 
 export default function MealDetail() {

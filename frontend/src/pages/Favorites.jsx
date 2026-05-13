@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { getFavorites, deleteFavorite, getMealById } from '../api/index';
-import { useAuth } from '../context/AuthContext';
+import { getFavorites, deleteFavorite, getMealById } from '../Services/index';
+import { useAuth } from '../state/AuthContext';
 import MealCard from '../components/MealCard';
 import './Favorites.css';
 

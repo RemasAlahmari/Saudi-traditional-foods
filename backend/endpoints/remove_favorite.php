@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . '/../middleware/helpers.php';
-require_once __DIR__ . '/../config/db.php';
+require_once __DIR__ . '/../Utilies/helpers.php';
+require_once __DIR__ . '/../Database_config/db.php';
 
 bootstrap('DELETE');
 $b = body();

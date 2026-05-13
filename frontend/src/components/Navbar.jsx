@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { useAuth } from '../context/AuthContext';
-import { logoutUser } from '../api/index';
+import { useAuth } from '../state/AuthContext';
+import { logoutUser } from '../Services/index';
 import './Navbar.css';
 
 export default function Navbar() {

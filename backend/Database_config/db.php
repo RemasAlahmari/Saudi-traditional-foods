@@ -1,5 +1,5 @@
 <?php
-// MariaDB connection — port 3307
+
 function getDB(): PDO {
     static $pdo = null;
     if ($pdo) return $pdo;

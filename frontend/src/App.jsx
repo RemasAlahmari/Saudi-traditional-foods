@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { AuthProvider } from './context/AuthContext';
-import ProtectedRoute from './context/ProtectedRoute';
+import { AuthProvider } from './state/AuthContext';
+import ProtectedRoute from './state/ProtectedRoute';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home       from './pages/Home';
@@ -9,7 +9,7 @@ import Login      from './pages/Login';
 import Register   from './pages/Register';
 import Favorites  from './pages/Favorites';
 import Profile    from './pages/Profile';
-import NotFound   from './pages/NotFound';
+import NotFound   from './pages/NotFoundPage';
 
 export default function App() {
   return (
