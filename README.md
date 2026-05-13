@@ -14,13 +14,14 @@ Tech Stack
 
 Frontend: React + Vite
 Backend: PHP
-Database: MySQL / MariaDB
+Database: MySQL / phpMyAdmin
 API: TheMealDB
 
-
 Setup
+
 1. Clone
-bashgit clone https://github.com/YOUR_USERNAME/Saudi-traditional-foods.git
+
+bashgit clone https://github.com/RemasAlahmari/Saudi-traditional-foods.git
 2. Database
 
 Open phpMyAdmin → create database saudi_foods_db
@@ -28,11 +29,11 @@ Import backend/database.sql
 
 3. Backend
 
-Copy backend/ to C:\xampp\htdocs\saudi-foods-backend\
+Copy backend/ to C:\xampp\htdocs\backend\
 Start Apache in XAMPP
 
 4. Frontend
-bashcd frontend
+bash cd frontend
 npm install
 npm run dev
 Open http://localhost:5173
@@ -40,5 +41,5 @@ Open http://localhost:5173
 Team
 Member       RoleMember
  Remas        Frontend
- Layan        Backend and database
+ Layan        Backend and database commands
  Zad          API and Database Connection and setup
