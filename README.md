@@ -22,20 +22,27 @@ Setup
 1. Clone
 
 bashgit clone https://github.com/RemasAlahmari/Saudi-traditional-foods.git
+
 2. Database
 
 Open phpMyAdmin → create database saudi_foods_db
+
 Import backend/database.sql
 
 3. Backend
 
 Copy backend/ to C:\xampp\htdocs\backend\
+
 Start Apache in XAMPP
 
 4. Frontend
+   
 bash cd frontend
+
 npm install
+
 npm run dev
+
 Open http://localhost:5173
 
 Team
