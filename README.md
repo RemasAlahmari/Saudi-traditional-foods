@@ -1,4 +1,4 @@
-**#🇸🇦 Saudi Traditional Foods**
+#🇸🇦 Saudi Traditional Foods
 A web app for browsing and saving authentic Saudi recipes.
 _🌐 Live Demo: https://saudi-traditional-foods-git-updatebranch-zad-s-projects.vercel.app/_
 
